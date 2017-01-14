@@ -35,6 +35,17 @@
 		.ant { background-image: url("lifeforms/blank-sq.png"); }
 		
 		.male { background-image: url("lifeforms/blank-sq.png"); }
+		
+		.death {
+			color: white;
+		    font-size: 40px;
+		    transform: rotate(300deg);
+		    -webkit-transform: rotate(300deg);
+		    text-align: center;
+		    position: absolute;
+		    width: 186px;
+		    top: 60px;
+	    }
 	</style>
 	
 	<!-- basic settings -->
@@ -88,9 +99,12 @@
       <ul class="timeline">
         <li>
           <div class="timeline-image">
-          	<div class="life mayfly img-circle">
-				<div class="progress mayfly img-circle" data-lifeform="mayfly" data-life-wasted="40"></div>
-			</div>
+          	<div>
+	          	<div class="life mayfly img-circle">
+					<div class="progress mayfly img-circle" data-lifeform="mayfly" data-life-wasted="40"></div>
+				</div>
+	            <div class="death">WASTED</div>
+            </div>
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
@@ -103,12 +117,16 @@
               </p>
             </div>
           </div>
+          
           <div class="line"></div>
         </li>
         <li class="timeline-inverted">
           <div class="timeline-image">
-            <div class="life mealmoth img-circle">
+            <div>
+	          <div class="life mealmoth img-circle">
 				<div class="progress mealmoth img-circle" data-lifeform="mealmoth" data-life-wasted="20"></div>
+		      </div>
+		      <!-- <div class="death">WASTED</div> -->
 			</div>
 		  </div>
           <div class="timeline-panel">
