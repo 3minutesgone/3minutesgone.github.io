@@ -1,0 +1,127 @@
+<html>
+<head>
+	<title>3minutesgone</title>
+	<!-- pick a good title -->
+	<!-- search engine keywords, author and description -->
+	<meta name="description" content="3minutesgone description">
+    <meta name="author" content="Skinny at @3minutesgone">
+    <meta name="keywords" content="three,minutes,gone">
+    
+    <!-- facebook title, thumbname and description -->
+    <meta property="og:title" content="3minutesgone"> 
+	<meta property="og:image" content="link_to_image">
+	<meta property="og:description" content="description goes here">
+	
+	<!-- DO NOT TOUCH - libraries to build page -->
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="timeline.css">
+	<link rel="stylesheet" href="3minutesgone.css">
+	<script type="text/javascript" src="3minutesgone.js"></script>
+	
+	<!-- three things for each lifeform
+	1. Set the background image below - a square image approx 186x186 px
+	2. Copy and paste the HTML for the lifeform including headings and text
+	3. Be sure to set properties on timeline 'progress' item including data-lifeform and data-life-wasted
+	// -->
+	
+	<!-- set background images here -->
+	<style>
+		.mayfly { background-image: url("mayfly-sq.png"); }
+		.mealmoth { background-image: url("mayfly-sq.png"); }
+		.ant { background-image: url("mayfly-sq.png"); }
+	</style>
+	
+	<!-- basic settings -->
+	<script>
+		var msBetweenExpand = 100; // lower is faster
+		var stepPercent = 2; // smaller is smoother
+		var startPercent = 0; // 0 starts out with no fill
+		var loopExpand = 0; // 1 means it loops
+	</script>
+	
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="text-center">3minutesgone Title</h3>
+      <p>
+        3minutesgone description, yada yada
+      </p>
+      <ul class="timeline">
+        <li>
+          <div class="timeline-image">
+          	<div class="life mayfly img-circle">
+				<div class="progress mayfly img-circle" data-lifeform="mayfly" data-life-wasted="70"></div>
+			</div>
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Mayfly</h4><h4 class="subheading">Subtitle</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Mayfly ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <div class="life mealmoth img-circle">
+				<div class="progress mealmoth img-circle" data-lifeform="mealmoth" data-life-wasted="5"></div>
+			</div>
+		  </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Meal Moth</h4><h4 class="subheading">Subtitle</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Meal Moth ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
+        <li>
+          <div class="timeline-image">
+          	<div class="life ant img-circle">
+				<div class="progress ant img-circle" data-lifeform="ant" data-life-wasted="2"></div>
+			</div>
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Red Velvet Ant</h4><h4 class="subheading">Subtitle</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Red Velvet Ant ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="line"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+	<!-- DO NOT TOUCH - this is where the expanding/filling is triggered -->
+	$( document ).ready(function() {
+		$('.progress').each(function() {
+			lifeform = $(this).data("lifeform");
+			lifeformElement = $('.progress.' + lifeform)[0];
+			lifeformWasted = $('.progress.' + lifeform).data("lifeWasted");
+			progress(lifeformElement, startPercent, msBetweenExpand, stepPercent, lifeformWasted, loopExpand);
+		});
+	});
+</script>
+
+</body>
+</html>
