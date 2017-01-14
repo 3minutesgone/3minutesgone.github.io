@@ -48,6 +48,16 @@
 </head>
 <body>
 
+<!-- facebook stuff -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
@@ -61,20 +71,21 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-3">
-      <div class="g-ytsubscribe" data-channelid="UCHRj7wSfIN9wxZQzcydcW2w" data-layout="full" data-count="default"></div>
-    </div>
+  	<div class="col-lg-3"></div>
     <div class="col-lg-3">
       <a href="https://twitter.com/3minutesgone" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @3minutesgone</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
-    <div class="col-lg-3"></div>
-    <div class="col-lg-3"></div>
+    <div class="col-lg-3">
+      <div class="fb-follow" data-href="https://www.facebook.com/3minutesgone/" data-width="200" data-layout="standard" data-size="large" data-show-faces="true"></div>
+    </div>
+    <div class="col-lg-3">
+      <div class="g-ytsubscribe" data-channelid="UCHRj7wSfIN9wxZQzcydcW2w" data-layout="full" data-count="default"></div>
+    </div>
   </div>
+
   <div class="row">
     <div class="col-lg-12">
-      
-      
       <ul class="timeline">
         <li>
           <div class="timeline-image">
